@@ -74,8 +74,8 @@ const siteIcon = {
 
 // 链接跳转
 const jumpLink = (data) => {
-  if (data.name === "音乐" && store.musicClick) {
-    if (typeof $openList === "function") $openList();
+  if (data.name === "Clash") {
+    if (window.clipboardData) window.clipboardData.setData('text', '192.168.31.100:7890');
   } else {
     window.open(data.link, "_blank");
   }
