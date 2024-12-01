@@ -17,7 +17,7 @@
         <span class="hidden">
           &amp;&nbsp;Made&nbsp;by
           <a :href="config.github" target="_blank">
-            {{ config.author }}
+            Encounter925
           </a>
         </span>
         <!-- 站点备案 -->
