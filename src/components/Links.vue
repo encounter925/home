@@ -75,7 +75,11 @@ const siteIcon = {
 // 链接跳转
 const jumpLink = (data) => {
   if (data.name === "Clash") {
-    if (window.clipboardData) window.clipboardData.setData('text', '192.168.31.100:7890');
+    ElMessage({
+      message: "Clash Addr:192.168.31.100:7890",
+      grouping: true,
+      duration: 4000,
+    });
   } else {
     window.open(data.link, "_blank");
   }
