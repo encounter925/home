@@ -11,11 +11,11 @@
             -
           </span>
           {{ fullYear }}
-          <a :href="siteUrl">{{ siteAuthor }}</a>
+          <span>{{ siteAuthor }}</span>
         </span>
         <!-- 以下信息请不要修改哦 -->
         <span class="hidden">
-          &amp;&nbsp;Made&nbsp;by
+          &amp;&nbsp;Modified&nbsp;by
           <a :href="config.github" target="_blank">
             Encounter925
           </a>
