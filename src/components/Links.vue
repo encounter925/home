@@ -80,7 +80,20 @@ const jumpLink = (data) => {
       grouping: true,
       duration: 4000,
     });
-  } else {
+  }
+  else if (data.name === "MC服务器") {
+    ElMessage({
+      message: "MC 内网:192.168.31.100:25565",
+      grouping: true,
+      duration: 4000,
+    });
+    ElMessage({
+      message: "MC 公网:frp-boy.top:17688",
+      grouping: true,
+      duration: 4000,
+    });
+  }
+  else {
     window.open(data.link, "_blank");
   }
 };
