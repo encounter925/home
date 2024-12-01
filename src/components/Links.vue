@@ -80,6 +80,10 @@ const jumpLink = (data) => {
       grouping: true,
       duration: 4000,
     });
+    navigator.clipboard.writeText("192.168.31.100:7890")
+        .then(() => alert('复制成功！'))
+        .catch(() => alert('复制失败，请检查权限或环境支持。'));
+
   }
   else if (data.name === "MC服务器") {
     ElMessage({
