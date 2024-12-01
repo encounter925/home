@@ -81,8 +81,16 @@ const jumpLink = (data) => {
       duration: 4000,
     });
     navigator.clipboard.writeText("192.168.31.100:7890")
-        .then(() => alert('复制成功！'))
-        .catch(() => alert('复制失败，请检查权限或环境支持。'));
+        .then(() => ElMessage({
+                      message: "地址成功复制到剪贴板！",
+                      grouping: true,
+                      duration: 4000,
+                    }))
+        .catch(() => ElMessage({
+                      message: "复制失败，可能是浏览器版本过旧！",
+                      grouping: true,
+                      duration: 4000,
+                    }));
 
   }
   else if (data.name === "MC服务器") {
