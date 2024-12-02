@@ -202,13 +202,13 @@ const jumpLink = (data) => {
   }
   else if (data.name === "无名杀服务器") {
     ElMessage({
-      message: "无名杀服务器:124.71.113.247:32770",
+      message: "无名杀服务器:124.71.113.247:32771",
       grouping: true,
       duration: 4000,
     });
 
     // 创建临时文本区域以实现复制
-    const messageText = "124.71.113.247:32770";
+    const messageText = "124.71.113.247:32771";
     const textArea = document.createElement("textarea");
     textArea.value = messageText;
     textArea.style.position = "fixed"; // 避免滚动时影响布局
