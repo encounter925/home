@@ -1,12 +1,12 @@
 [
   {
     "icon": "Blog",
-    "name": "公网网盘",
-    "link": "https://frp-oil.top:64600/"
+    "name": "公网主页",
+    "link": "http://https://124.71.113.247/"
   },
   {
     "icon": "Cloud",
-    "name": "网盘",
+    "name": "内网网盘",
     "link": "http://192.168.31.100:5244/"
   },
   {
@@ -16,13 +16,13 @@
   },
   {
     "icon": "Compass",
-    "name": "MC服务器",
-    "link": "http://192.168.31.100:23333/"
+    "name": "Clash",
+    "link": "http://192.168.31.100:9090/ui/"
   },
   {
     "icon": "Book",
-    "name": "Clash",
-    "link": "http://192.168.31.100:9090/ui/"
+    "name": "MC服务器",
+    "link": "http://192.168.31.100:23333/"
   },
   {
     "icon": "Magnet",
