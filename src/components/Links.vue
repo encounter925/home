@@ -80,9 +80,9 @@ const jumpLink = (data) => {
       grouping: true,
       duration: 4000,
     });
-    
-    const messageText = "Clash Addr:192.168.31.100:7890";
+
     // 创建临时文本区域以实现复制
+    const messageText = "192.168.31.100:7890";
     const textArea = document.createElement("textarea");
     textArea.value = messageText;
     textArea.style.position = "fixed"; // 避免滚动时影响布局
@@ -93,12 +93,24 @@ const jumpLink = (data) => {
     try {
       const successful = document.execCommand("copy");
       if (successful) {
-        console.log("文本已成功复制到剪贴板！");
+        ElMessage({
+          message: "Clash地址已成功复制到剪贴板!",
+          grouping: true,
+          duration: 4000,
+        });
       } else {
-        console.error("复制到剪贴板失败");
+        ElMessage({
+          message: "复制到剪贴板失败",
+          grouping: true,
+          duration: 4000,
+        });
       }
     } catch (err) {
-      console.error("执行复制操作时出错: ", err);
+      ElMessage({
+          message: "复制到剪贴板时出错！",
+          grouping: true,
+          duration: 4000,
+        });
     }
 
     // 移除临时文本区域
@@ -110,11 +122,41 @@ const jumpLink = (data) => {
       grouping: true,
       duration: 4000,
     });
-    ElMessage({
-      message: "MC 公网:frp-boy.top:17688",
-      grouping: true,
-      duration: 4000,
-    });
+
+    // 创建临时文本区域以实现复制
+    const messageText = "192.168.31.100:25565";
+    const textArea = document.createElement("textarea");
+    textArea.value = messageText;
+    textArea.style.position = "fixed"; // 避免滚动时影响布局
+    textArea.style.opacity = "0"; // 隐藏文本区域
+    document.body.appendChild(textArea);
+    textArea.select();
+
+    try {
+      const successful = document.execCommand("copy");
+      if (successful) {
+        ElMessage({
+          message: "MC 内网地址已成功复制到剪贴板!",
+          grouping: true,
+          duration: 4000,
+        });
+      } else {
+        ElMessage({
+          message: "复制到剪贴板失败",
+          grouping: true,
+          duration: 4000,
+        });
+      }
+    } catch (err) {
+      ElMessage({
+          message: "复制到剪贴板时出错！",
+          grouping: true,
+          duration: 4000,
+        });
+    }
+
+    // 移除临时文本区域
+    document.body.removeChild(textArea);
   }
   else {
     window.open(data.link, "_blank");
