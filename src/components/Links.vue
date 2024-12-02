@@ -76,7 +76,7 @@ const siteIcon = {
 const jumpLink = (data) => {
   if (data.name === "Clash") {
     ElMessage({
-      message: "Clash Addr:192.168.31.100:7890",
+      message: "Clash地址:192.168.31.100:7890",
       grouping: true,
       duration: 4000,
     });
@@ -137,6 +137,90 @@ const jumpLink = (data) => {
       if (successful) {
         ElMessage({
           message: "MC 内网地址已成功复制到剪贴板!",
+          grouping: true,
+          duration: 4000,
+        });
+      } else {
+        ElMessage({
+          message: "复制到剪贴板失败",
+          grouping: true,
+          duration: 4000,
+        });
+      }
+    } catch (err) {
+      ElMessage({
+          message: "复制到剪贴板时出错！",
+          grouping: true,
+          duration: 4000,
+        });
+    }
+
+    // 移除临时文本区域
+    document.body.removeChild(textArea);
+  }
+  else if (data.name === "MC公网") {
+    ElMessage({
+      message: "MC 公网:frp-boy.top:17688",
+      grouping: true,
+      duration: 4000,
+    });
+
+    // 创建临时文本区域以实现复制
+    const messageText = "frp-boy.top:17688";
+    const textArea = document.createElement("textarea");
+    textArea.value = messageText;
+    textArea.style.position = "fixed"; // 避免滚动时影响布局
+    textArea.style.opacity = "0"; // 隐藏文本区域
+    document.body.appendChild(textArea);
+    textArea.select();
+
+    try {
+      const successful = document.execCommand("copy");
+      if (successful) {
+        ElMessage({
+          message: "MC 公网地址已成功复制到剪贴板!",
+          grouping: true,
+          duration: 4000,
+        });
+      } else {
+        ElMessage({
+          message: "复制到剪贴板失败",
+          grouping: true,
+          duration: 4000,
+        });
+      }
+    } catch (err) {
+      ElMessage({
+          message: "复制到剪贴板时出错！",
+          grouping: true,
+          duration: 4000,
+        });
+    }
+
+    // 移除临时文本区域
+    document.body.removeChild(textArea);
+  }
+  else if (data.name === "无名杀服务器") {
+    ElMessage({
+      message: "无名杀服务器:124.71.113.247:32770",
+      grouping: true,
+      duration: 4000,
+    });
+
+    // 创建临时文本区域以实现复制
+    const messageText = "124.71.113.247:32770";
+    const textArea = document.createElement("textarea");
+    textArea.value = messageText;
+    textArea.style.position = "fixed"; // 避免滚动时影响布局
+    textArea.style.opacity = "0"; // 隐藏文本区域
+    document.body.appendChild(textArea);
+    textArea.select();
+
+    try {
+      const successful = document.execCommand("copy");
+      if (successful) {
+        ElMessage({
+          message: "无名杀服务器地址已成功复制到剪贴板!",
           grouping: true,
           duration: 4000,
         });

@@ -1,32 +1,32 @@
 [
   {
     "icon": "Blog",
-    "name": "公网主页",
-    "link": "http://124.71.113.247/"
+    "name": "内网主页",
+    "link": "http://192.168.31.100/"
   },
   {
     "icon": "Cloud",
-    "name": "内网网盘",
-    "link": "http://192.168.31.100:5244/"
+    "name": "公网网盘",
+    "link": "https://frp-oil.top:64600/"
   },
   {
     "icon": "CompactDisc",
-    "name": "观影",
-    "link": "http://192.168.31.100:32774/web/index.html"
+    "name": "无名杀在线",
+    "link": "http://124.71.113.247:32770/"
   },
   {
     "icon": "Compass",
-    "name": "Clash",
-    "link": "http://192.168.31.100:9090/ui/"
+    "name": "无名杀服务器",
+    "link": "http://124.71.113.247:32771/"
   },
   {
     "icon": "Book",
-    "name": "MC服务器",
-    "link": "http://192.168.31.100:23333/"
+    "name": "MC公网",
+    "link": "http://frp-boy.top:17688/"
   },
   {
     "icon": "Magnet",
     "name": "迅雷离线",
-    "link": "http://192.168.31.100:2345/"
+    "link": "http://124.71.113.247:2345/"
   }
 ]
