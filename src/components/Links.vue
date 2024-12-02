@@ -80,18 +80,29 @@ const jumpLink = (data) => {
       grouping: true,
       duration: 4000,
     });
-    navigator.clipboard.writeText("192.168.31.100:7890")
-        .then(() => ElMessage({
-                      message: "地址成功复制到剪贴板！",
-                      grouping: true,
-                      duration: 4000,
-                    }))
-        .catch(() => ElMessage({
-                      message: "复制失败，可能是浏览器版本过旧！",
-                      grouping: true,
-                      duration: 4000,
-                    }));
+    
+    const messageText = "Clash Addr:192.168.31.100:7890";
+    // 创建临时文本区域以实现复制
+    const textArea = document.createElement("textarea");
+    textArea.value = messageText;
+    textArea.style.position = "fixed"; // 避免滚动时影响布局
+    textArea.style.opacity = "0"; // 隐藏文本区域
+    document.body.appendChild(textArea);
+    textArea.select();
 
+    try {
+      const successful = document.execCommand("copy");
+      if (successful) {
+        console.log("文本已成功复制到剪贴板！");
+      } else {
+        console.error("复制到剪贴板失败");
+      }
+    } catch (err) {
+      console.error("执行复制操作时出错: ", err);
+    }
+
+    // 移除临时文本区域
+    document.body.removeChild(textArea);
   }
   else if (data.name === "MC服务器") {
     ElMessage({
